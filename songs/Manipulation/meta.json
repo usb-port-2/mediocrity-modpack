@@ -1,0 +1,17 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "",
+	"difficulties": [
+		"Hard"
+	],
+	"parsedColor": -7376387,
+	"customValues": {},
+	"color": "#8F71FD",
+	"name": "Manipulation",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Manipulation",
+	"beatsPerMeasure": 4,
+	"needsVoices": false,
+	"bpm": 100
+}

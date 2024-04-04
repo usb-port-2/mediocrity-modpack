@@ -1,0 +1,17 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "",
+	"difficulties": [
+		"CHART"
+	],
+	"parsedColor": -7376387,
+	"customValues": {},
+	"color": "#8F71FD",
+	"name": "Blazed",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Manipulation",
+	"beatsPerMeasure": 4,
+	"needsVoices": false,
+	"bpm": 100
+}

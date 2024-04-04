@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character x="0" icon="sonic" y="0" isGF="false" scale="1" isPlayer="false" holdTime="4" sprite="sonic">
+	<anim x="0" loop="false" y="0" fps="24" anim="idle" name="idle"/>
+	<anim x="-15" loop="false" y="55" fps="24" anim="up0" name="singUP"/>
+	<anim x="-10" loop="false" y="60" fps="24" anim="left0" name="singRIGHT"/>
+	<anim x="-15" loop="false" y="50" fps="24" anim="down0" name="singDOWN"/>
+	<anim x="-15" loop="false" y="55" fps="24" anim="right0" name="singLEFT"/>
+	<anim x="5" loop="false" y="55" fps="24" anim="tranformation" name="transgenber"/>
+</character>

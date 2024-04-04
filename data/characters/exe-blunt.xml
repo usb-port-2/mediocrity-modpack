@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character x="0" icon="exe-blunted" y="0" isGF="false" color="#0F175D" flipX="true" isPlayer="false" gameOverChar="death-blazed" sprite="exe-blunt">
+	<anim x="0" loop="true" y="0" fps="24" anim="idle" name="idle"/>
+	<anim x="-15" loop="false" y="55" fps="24" anim="up0" name="singUP"/>
+	<anim x="240" loop="false" y="0" fps="24" anim="up miss" name="singUPmiss"/>
+	<anim x="-105" loop="false" y="-23" fps="24" anim="left0" name="singRIGHT"/>
+	<anim x="-10" loop="false" y="-50" fps="24" anim="left miss" name="singRIGHTmiss"/>
+	<anim x="55" loop="false" y="-15" fps="24" anim="down0" name="singDOWN"/>
+	<anim x="105" loop="false" y="30" fps="24" anim="down miss" name="singDOWNmiss"/>
+	<anim x="-5" loop="false" y="35" fps="24" anim="right0" name="singLEFT"/>
+	<anim x="155" loop="false" y="30" fps="24" anim="right miss" name="singLEFTmiss"/>
+	<anim x="0" loop="false" y="0" fps="24" anim="dead_nmi" name="womp womp"/>
+</character>

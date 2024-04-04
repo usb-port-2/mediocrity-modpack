@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<character x="0" icon="nmi-blunted" y="0" isGF="false" isPlayer="false" holdTime="4" sprite="nmi-blunt" color="0x7f7f7f">
+	<anim x="0" loop="false" y="0" fps="24" anim="idle" name="idle"/>
+	<anim x="-5" loop="false" y="55" fps="24" anim="up" name="singUP"/>
+	<anim x="14" loop="false" y="32" fps="24" anim="left" name="singLEFT"/>
+	<anim x="-18" loop="false" y="56" fps="24" anim="right" name="singRIGHT"/>
+	<anim x="70" loop="false" y="70" fps="24" anim="down" name="singDOWN"/>
+	<anim x="-20" loop="false" y="85" fps="24" anim="COF COF " name="cough"/>
+	<anim x="-375" loop="true" y="-430" fps="24" anim="DEAD" name="idle-alt"/>
+	<anim x="-10" loop="false" y="120" fps="24" anim="DEAH POSE" name="dying"/>
+</character>

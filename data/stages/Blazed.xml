@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.6" name="Blazed" folder="stages/WEED/">
+	<sprite name="sky" x="300" y="300" sprite="sky" scrollx="1.5" scale="1.25"/>
+	<sprite name="rocks" x="0" y="400" sprite="fuckass-rocks" scrollx="1.1" scale="1.1"/>
+	<sprite name="ground" x="0" y="638" sprite="ground"/>
+	<dad scale="0.75" x="600" y="800"/>
+	<boyfriend scale="0.75" x="1700" y="875"/>
+</stage>

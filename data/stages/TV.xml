@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.6" name="tv" folder="stages/tv">
+	<sprite name="bg" x="0" y="0" sprite="game" scale="0.65"/>
+	<boyfriend alpha="0"/>
+	<dad x="825" y="525" camyoffset="650" camxoffset="375"/>
+	<combo y="400" x="100"/>
+	<sprite name="overlay" x="-50" y="0" sprite="game-overlay" alpha="0"/>
+</stage>
