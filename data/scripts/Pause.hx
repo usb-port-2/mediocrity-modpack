@@ -6,16 +6,15 @@ var select:Int = 0;
 
 menuItems = [""];
 
+var songInfo = [
+	"Blazed" => ["SONG: Mr. Maestro", "ART: Muleta (unfortunately)", "CODE: Care"],
+	"Manipulation" => ["SONG: Jamal", "ART: Muleta & GrinchDaDude", "CODE: Care"]
+];
 function postCreate() {
 	camPause = new FlxCamera();
 	camPause.bgColor = 0;
 	FlxG.cameras.add(camPause, false);
 	window.title = "MEDIOCRITY. | Paused: " + PlayState.SONG.meta.name;
-	add(sidebar = new FlxSprite().loadGraphic(Paths.image("menus/freeplay/sidebar")));
-	sidebar.flipX = true;
-	sidebar.x = FlxG.width - sidebar.width;
-	sidebar.camera = camPause;
-    sidebar.antialiasing = Options.antialiasing;
 	for(a in 0...4){
 		var options = new FlxSprite().loadGraphic(Paths.image("menus/pause/" + (PlayState.SONG.meta.name == "Manipulation" && PlayState.instance.dad.color == 0xFF0000 ? "0" : a)));
 		options.camera = camPause;
@@ -23,13 +22,32 @@ function postCreate() {
 		options.setPosition(a == 0 || a == 2 ? 0 - options.width : FlxG.width, (FlxG.height/5 * (a+1)) - options.height/2);
 		options.alpha = 0;
         options.antialiasing = Options.antialiasing;
-		FlxTween.tween(options, {alpha: 1, x: FlxG.width/4 * 2}, 0.5, {
+		FlxTween.tween(options, {alpha: 1, x: FlxG.width/4 - options.width/2}, 0.5, {
 			ease: FlxEase.quartInOut,
 			startDelay: (a+1)/10
 		});
 		stuff.push(options);
 		add(stuff[a]);
 	}
+
+	add(portrait = new FlxSprite().loadGraphic(Paths.image("menus/pause/New Folder/" + (PlayState.SONG.meta.name == "Blazed" ? "blazed" : "manipulation_" + (PlayState.instance.dad.color == 0xFF0000 ? "2" : "1")))));
+	portrait.camera = camPause;
+    portrait.antialiasing = Options.antialiasing;
+	add(sidebar = new FlxSprite().loadGraphic(Paths.image("menus/pause/bar")));
+	sidebar.x = FlxG.width - sidebar.width;
+	sidebar.camera = camPause;
+    sidebar.antialiasing = Options.antialiasing;
+	for(num => a in songInfo[PlayState.SONG.meta.name]){
+		add(info = new FlxText(sidebar.x + 150 - (num * 30), 500 + (55 * num), 0, a).setFormat(Paths.font("vcr.ttf"), 50, PlayState.instance.dad.color));
+		//info.x = FlxG.width - sidebar.width;
+		info.camera = camPause;
+		info.antialiasing = Options.antialiasing;
+	}
+	add(songTitle = new FlxText(FlxG.width*2, 5, 0, PlayState.SONG.meta.name).setFormat(Paths.font("vcr.ttf"), 75, PlayState.instance.dad.color));
+	songTitle.camera = camPause;
+    songTitle.antialiasing = Options.antialiasing;
+	FlxTween.tween(songTitle, {x: FlxG.width - songTitle.width - 10}, 0.5, {ease: FlxEase.quartInOut});
+
 	grpMenuShit.clear();
     changeSelection(0);
 }

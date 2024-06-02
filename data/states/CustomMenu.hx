@@ -1,14 +1,7 @@
 import funkin.options.OptionsMenu;
 import funkin.options.Options;
-import funkin.savedata.FunkinSave;
 import funkin.menus.ModSwitchMenu;
 
-var idfk:Array<HighscoreChange> = [];
-
-if(FunkinSave.getSongHighscore("Sloppy Toppy", "Hard", idfk).score == 0){
-	PlayState.loadSong("Sloppy Toppy", "Hard");
-	FlxG.switchState(new PlayState());
-} else {
 	var buttons:Array<FlxSprite> = [];
 
 	function create(){
@@ -43,7 +36,7 @@ if(FunkinSave.getSongHighscore("Sloppy Toppy", "Hard", idfk).score == 0){
 	function update(elapsed){
 			if (controls.SWITCHMOD) {
 				openSubState(new ModSwitchMenu());
-				persistentUpdate = false;
+				persistentUpdate = true;
 				persistentDraw = true;
 			}
 		if(FlxG.mouse.justPressed)
@@ -66,4 +59,3 @@ if(FunkinSave.getSongHighscore("Sloppy Toppy", "Hard", idfk).score == 0){
 	function beatHit(curBeat:Int){
 		FlxTween.num(1.05, 1, 0.35, {}, function(a) logo.scale.set(a, a));
 	}
-}

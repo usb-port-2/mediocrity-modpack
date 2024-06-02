@@ -1,12 +1,5 @@
 import funkin.options.Options;
-import funkin.savedata.FunkinSave;
 
-var idfk:Array<HighscoreChange> = [];
-
-if(FunkinSave.getSongHighscore("Sloppy Toppy", "Hard", idfk).score == 0){
-	PlayState.loadSong("Sloppy Toppy", "Hard");
-	FlxG.switchState(new PlayState());
-} else {
     var texts:Array<FlxSprite> = [];
     var curSelect:Int = 0;
 
@@ -54,4 +47,3 @@ if(FunkinSave.getSongHighscore("Sloppy Toppy", "Hard", idfk).score == 0){
             FlxTween.num(a.scale.x, curSelect == num ? 1 : 0.8, 0.25, {ease: FlxEase.quadInOut}, function(ass) a.scale.set(ass, ass));
         }
     }
-}
