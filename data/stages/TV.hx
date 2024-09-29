@@ -1,3 +1,5 @@
+import openfl.display.BlendMode;
+
 var shader = new CustomShader("TVStatic");
 var frame = new FlxSprite().loadGraphic(Paths.image("stages/TV/frame")).screenCenter();
 var red:Bool;
@@ -43,6 +45,7 @@ function postCreate(){
 		uiText[num].scrollFactor.set(0, 0);
 		add(uiText[num]);
 	}
+	overlay.blend = BlendMode.MULTIPLY;
 }
 
 function stepHit(curStep) if(curStep == 1418) bopThisShit = true;

@@ -1,0 +1,19 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 132,
+	"difficulties": [
+		"Mediocre"
+	],
+	"needsVoices": false,
+	"parsedColor": -1,
+	"displayName": "Sloppier Toppy",
+	"icon": "Icon",
+	"name": "Sloppier Toppy",
+	"color": "#FFFFFF",
+	"customValues": {
+		"composer": "Mr. Maestro"
+	}
+}

@@ -1,4 +1,4 @@
-if(SONG.meta.name != "Sloppy Toppy"){
+if(SONG.meta.name != "Sloppy Toppy" && SONG.meta.name != "Sloppier Toppy"){
     PauseSubState.script = 'data/scripts/pause';
 
     var drunk = new CustomShader('drunk');

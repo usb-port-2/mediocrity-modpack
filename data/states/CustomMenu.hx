@@ -43,7 +43,9 @@ import funkin.menus.ModSwitchMenu;
 			for(a in buttons)
 				if(a.animation.curAnim.name == "transition")
 					switch(buttons.indexOf(a)){
-						case 0: trace("nuh uh");
+						case 0:
+							PlayState.loadSong("expectations", "skibidirizz");
+							FlxG.switchState(new PlayState());
 						case 1: FlxG.switchState(new ModState("CustomFreeplay"));
 						case 2: FlxG.switchState(new ModState("CustomCredits"));
 						case 3: FlxG.switchState(new OptionsMenu());
