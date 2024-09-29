@@ -8,7 +8,8 @@ menuItems = [""];
 
 var songInfo = [
 	"Blazed" => ["SONG: Mr. Maestro", "ART: Muleta (unfortunately)", "CODE: Care"],
-	"Manipulation" => ["SONG: Jamal", "ART: Muleta & GrinchDaDude", "CODE: Care"]
+	"Manipulation" => ["SONG: Jamal", "ART: Muleta & GrinchDaDude", "CODE: Care"],
+	"Expectations" => ["I am sexually attracted to\nskibidi toilet in a weird way,\nI don't know why, I think that\nit is his face because oh my- his human form are whatever \"male_09\" or some form of him in a human body is so hot.","",""]
 ];
 function postCreate() {
 	camPause = new FlxCamera();
@@ -30,7 +31,7 @@ function postCreate() {
 		add(stuff[a]);
 	}
 
-	add(portrait = new FlxSprite().loadGraphic(Paths.image("menus/pause/New Folder/" + (PlayState.SONG.meta.name == "Blazed" ? "blazed" : "manipulation_" + (PlayState.instance.dad.color == 0xFF0000 ? "2" : "1")))));
+	add(portrait = new FlxSprite().loadGraphic(Paths.image("menus/pause/New Folder/" + (PlayState.SONG.meta.name != "manipulation" ? PlayState.SONG.meta.name : "manipulation_" + (PlayState.instance.dad.color == 0xFF0000 ? "2" : "1")))));
 	portrait.camera = camPause;
     portrait.antialiasing = Options.antialiasing;
 	add(sidebar = new FlxSprite().loadGraphic(Paths.image("menus/pause/bar")));
@@ -38,7 +39,7 @@ function postCreate() {
 	sidebar.camera = camPause;
     sidebar.antialiasing = Options.antialiasing;
 	for(num => a in songInfo[PlayState.SONG.meta.name]){
-		add(info = new FlxText(sidebar.x + 150 - (num * 30), 500 + (55 * num), 0, a).setFormat(Paths.font("vcr.ttf"), 50, PlayState.instance.dad.color));
+		add(info = new FlxText(sidebar.x + 150 - (num * 30), 500 + (55 * num), 0, a).setFormat(Paths.font(StringTools.startsWith(a, "I am") ? "papyrus.ttf" : "vcr.ttf"), 50, PlayState.instance.dad.color));
 		//info.x = FlxG.width - sidebar.width;
 		info.camera = camPause;
 		info.antialiasing = Options.antialiasing;
