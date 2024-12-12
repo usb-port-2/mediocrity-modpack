@@ -1,26 +1,18 @@
-// Automatically converted with https://github.com/TheLeerName/ShadertoyToFlixel
-
 #pragma header
-
 #define round(a) floor(a + 0.5)
 #define iResolution vec3(openfl_TextureSize, 0.)
 uniform float iTime;
 #define iChannel0 bitmap
 #define texture flixel_texture2D
-
-// third argument fix
 vec4 flixel_texture2D(sampler2D bitmap, vec2 coord, float bias) {
 	vec4 color = texture2D(bitmap, coord, bias);
-	if (!hasTransform)
-	{
+	if (!hasTransform) {
 		return color;
 	}
-	if (color.a == 0.0)
-	{
+	if (color.a == 0.0) {
 		return vec4(0.0, 0.0, 0.0, 0.0);
 	}
-	if (!hasColorTransform)
-	{
+	if (!hasColorTransform) {
 		return color * openfl_Alphav;
 	}
 	color = vec4(color.rgb / color.a, color.a);

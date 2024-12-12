@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="0" icon="exe-blunted" y="0" isGF="false" color="#0F175D" flipX="true" isPlayer="false" gameOverChar="death-blazed" sprite="exe-blunt">
+<character color="#0F175D" flipX="true" gameOverChar="death-blazed">
 	<anim x="0" loop="true" y="0" fps="24" anim="idle" name="idle"/>
 	<anim x="-15" loop="false" y="55" fps="24" anim="up0" name="singUP"/>
 	<anim x="240" loop="false" y="0" fps="24" anim="up miss" name="singUPmiss"/>
